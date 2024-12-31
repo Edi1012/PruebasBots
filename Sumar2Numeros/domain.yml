@@ -8,6 +8,14 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - sumar_numeros
+
+entities:
+  - numero1
+  - numero2
+
+actions:
+  - action_sumar_numeros
 
 responses:
   utter_greet:
@@ -28,6 +36,16 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+
+  utter_ask_numero1:
+  - text: "Por favor, dime el primer número."
+
+  utter_ask_numero2:
+  - text: "¿Y cuál es el segundo número?"
+
+  utter_suma_resultado:
+  - text: "El resultado de sumar {numero1} y {numero2} es {resultado}."
 
 session_config:
   session_expiration_time: 60

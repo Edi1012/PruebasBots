@@ -89,3 +89,11 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+
+- intent: sumar_numeros
+  examples: |
+    - Suma [4](numero1) y [5](numero2)
+    - Quiero sumar [10](numero1) más [20](numero2)
+    - ¿Cuál es la suma de [7](numero1) y [8](numero2)?
+    - Calcula [15](numero1) más [25](numero2)
