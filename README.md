@@ -28,7 +28,7 @@ Para trabajar con el proyecto dentro de este repositorio, asegúrate de tener in
 
 2. Accede al proyecto actual:
    ```bash
-   cd sum-bot
+   cd projectName
    ```
 
 3. Entrena el modelo:
