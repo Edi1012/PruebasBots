@@ -1,0 +1,53 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: agregar un elemento a la lista
+  steps:
+    - intent: add_item
+      entities:
+        - item: "manzana"
+    - action: action_add_item
+    - slot_was_set:
+        - shopping_list: ["manzana"]
+
+- story: eliminar un elemento de la lista
+  steps:
+    - intent: remove_item
+      entities:
+        - item: "manzana"
+    - action: action_remove_item
+    - slot_was_set:
+        - shopping_list: []
+
+- story: mostrar la lista
+  steps:
+    - intent: show_list
+    - action: action_show_list
